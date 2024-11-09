@@ -1,0 +1,203 @@
+/* Estilo geral */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;  /* Fundo preto */
+    color: #fff;  /* Texto branco */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2.5em;
+    color: #E50914;  /* Vermelho Netflix */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Faixa superior estilo Netflix */
+.top-bar {
+    width: 100%;
+    height: 60px;
+    background-color: #141414;  /* Preto escuro para a barra superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.top-bar h1 {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-right: 20px;
+}
+
+.top-bar a:hover {
+    color: #E50914;  /* Vermelho Netflix nos links */
+}
+
+/* Espaçamento para compensar a barra superior fixa */
+body {
+    padding-top: 80px;
+}
+
+/* Container de filmes com layout tipo carrossel */
+.movies-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 40px 20px;
+    scroll-behavior: smooth;
+    background-color: #141414;  /* Fundo escuro estilo Netflix */
+}
+
+.movie-item {
+    flex: none;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #222;  /* Fundo escuro para cada item de filme */
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.7);  /* Efeito hover com destaque vermelho */
+}
+
+.movie-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.movie-info h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.movie-info p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.movie-info p strong {
+    color: #fff;
+}
+
+/* Botões principais */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    margin: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+}
+
+/* Botão de editar */
+.btn-edit {
+    background-color: #4CAF50;  /* Verde */
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+/* Botão de excluir */
+.btn-delete {
+    background-color: #E50914;  /* Vermelho Netflix */
+}
+
+.btn-delete:hover {
+    background-color: #d50000;
+}
+
+/* Botão de adicionar novo filme, reposicionado */
+.add-movie {
+    margin-top: 40px;  /* Mais espaço acima */
+    padding: 20px;
+}
+
+.add-movie a {
+    text-decoration: none;
+}
+
+.btn-add {
+    background-color: #2196F3;  /* Azul */
+}
+
+.btn-add:hover {
+    background-color: #1e88e5;
+}
+
+/* Botão de voltar */
+.btn-back {
+    background-color: #FF9800;  /* Laranja */
+    margin-bottom: 20px;
+}
+
+.btn-back:hover {
+    background-color: #FB8C00;
+}
+
+/* Barra de rolagem minimalista */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E50914;  /* Vermelho Netflix */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+/* Estilo responsivo para filmes */
+@media (max-width: 768px) {
+    .movie-item {
+        width: 150px;
+        height: 225px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
